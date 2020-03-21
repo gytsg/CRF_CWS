@@ -1,12 +1,12 @@
 # CRF_CWS
-Using CRF to deal with CWS(Chinese words segmentation) problem
-
-1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/
-2.-> Extract  
-$ cd CRF++-0.58 
-$ ./configure 
-$ sudo make 
-$ sudo make install
+Using CRF to deal with CWS(Chinese words segmentation) problem\n
+\n
+1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/\n
+2.-> Extract  \n
+$ cd CRF++-0.58 \n
+$ ./configure \n
+$ sudo make \n
+$ sudo make install\n
 //if raise "ImportError: libcrfpp.so.0: cannot open shared object file: No such file or directory"
 //use "ln -s /usr/local/lib/libcrfpp.so.0 /usr/lib/"
 
