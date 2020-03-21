@@ -1,5 +1,4 @@
 # CRF_CWS Using CRF to deal with CWS(Chinese words segmentation) problem
-========================
 <br>
 1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/ <br>
 2.-> Extract  <br>
@@ -22,7 +21,7 @@ Template is the template file, and model is the model file after the training is
 You only need to put the template and training data into the new folder.<br>
 `$ crf_learn -f 3 -c 4.0 ./template ./train.utf8 model`<br>
 <br>
-////////////////////template file//////////////////<br>
+`template file`<br>
 ```
 # Unigram<br>
 U00:%x[-2,0]<br>
@@ -54,5 +53,3 @@ Then execute crf_test to get the word annotation result<br>
 `$ perl score ./icwb2-data/gold/pku_training_words.utf8 ./icwb2-data/gold/pku_test_gold.utf8 test.tag.utf8 > score_crf.ut8`<br>
 <br>
 `F measure on pku set is : 0.930`<br>
-  1
-  2
