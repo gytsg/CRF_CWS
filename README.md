@@ -1,5 +1,4 @@
-# CRF_CWS
-Using CRF to deal with CWS(Chinese words segmentation) problem
+# CRF_CWS Using CRF to deal with CWS(Chinese words segmentation) problem
 ========================
 <br>
 1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/ <br>
@@ -53,5 +52,6 @@ Then execute crf_test to get the word annotation result<br>
 7.Evaluate the segmentation effect.<br>
 `$ perl score ./icwb2-data/gold/pku_training_words.utf8 ./icwb2-data/gold/pku_test_gold.utf8 test.tag.utf8 > score_crf.ut8`<br>
 <br>
+------------------------------------
 F measure on pku set is : 0.930<br>
 ------------------------------------
