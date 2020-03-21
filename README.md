@@ -2,7 +2,7 @@
 <br>
 1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/. <br>
 
-2.-> Extract  <br>
+2.```$ "Extract" ```<br>
 ```$ cd CRF++-0.58```<br>
 ```$ ./configure```<br>
 ```$ sudo make```<br>
