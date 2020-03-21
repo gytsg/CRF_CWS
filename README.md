@@ -22,7 +22,7 @@ You only need to put the template and training data into the new folder.<br>
 `$ crf_learn -f 3 -c 4.0 ./template ./train.utf8 model`<br>
 <br>
 `template file`<br>
-```
+`
 # Unigram<br>
 U00:%x[-2,0]<br>
 U01:%x[-1,0]<br>
@@ -37,7 +37,7 @@ U09:%x[0,0]/%x[1,0]<br>
 <br>
 # Bigram<br>
 B<br>
-```
+`
 <br>
 5.With the model, we still need to prepare a test corpus for cr ++, and then use the testing tool of cr ++, crf_test, <br>
 for word annotation. The original test corpus is icwb2-data/testing/pku_test.utf8<br>
