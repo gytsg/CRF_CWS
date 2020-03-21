@@ -21,22 +21,22 @@ Template is the template file, and model is the model file after the training is
 You only need to put the template and training data into the new folder.
 $ crf_learn -f 3 -c 4.0 ./template ./train.utf8 model
 
-//template file////////////////////////////
-# Unigram
-U00:%x[-2,0]
-U01:%x[-1,0]
-U02:%x[0,0]
-U03:%x[1,0]
-U04:%x[2,0]
-U05:%x[-2,0]/%x[-1,0]/%x[0,0]
-U06:%x[-1,0]/%x[0,0]/%x[1,0]
-U07:%x[0,0]/%x[1,0]/%x[2,0]
-U08:%x[-1,0]/%x[0,0]
-U09:%x[0,0]/%x[1,0]
-
-# Bigram
-B
-/////////////////////////////////////////////
+////////////////////template file//////////////////
+///   # Unigram
+///   U00:%x[-2,0]
+///   U01:%x[-1,0]
+///   U02:%x[0,0]
+///   U03:%x[1,0]
+///   U04:%x[2,0]
+///   U05:%x[-2,0]/%x[-1,0]/%x[0,0]
+///   U06:%x[-1,0]/%x[0,0]/%x[1,0]
+///   U07:%x[0,0]/%x[1,0]/%x[2,0]
+///   U08:%x[-1,0]/%x[0,0]
+///   U09:%x[0,0]/%x[1,0]
+///   
+///   # Bigram
+///   B
+///////////////////////////////////////////////////
 
 5.With the model, we still need to prepare a test corpus for cr ++, and then use the testing tool of cr ++, crf_test, 
 for word annotation. The original test corpus is icwb2-data/testing/pku_test.utf8
