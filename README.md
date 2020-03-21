@@ -23,21 +23,22 @@ You only need to put the template and training data into the new folder.<br>
 `$ crf_learn -f 3 -c 4.0 ./template ./train.utf8 model`<br>
 <br>
 ////////////////////template file//////////////////<br>
-///   # Unigram<br>
-///   U00:%x[-2,0]<br>
-///   U01:%x[-1,0]<br>
-///   U02:%x[0,0]<br>
-///   U03:%x[1,0]<br>
-///   U04:%x[2,0]<br>
-///   U05:%x[-2,0]/%x[-1,0]/%x[0,0]<br>
-///   U06:%x[-1,0]/%x[0,0]/%x[1,0]<br>
-///   U07:%x[0,0]/%x[1,0]/%x[2,0]<br>
-///   U08:%x[-1,0]/%x[0,0]<br>
-///   U09:%x[0,0]/%x[1,0]<br>
-///   <br>
-///   # Bigram<br>
-///   B<br>
-///////////////////////////////////////////////////<br>
+```
+# Unigram<br>
+U00:%x[-2,0]<br>
+U01:%x[-1,0]<br>
+U02:%x[0,0]<br>
+U03:%x[1,0]<br>
+U04:%x[2,0]<br>
+U05:%x[-2,0]/%x[-1,0]/%x[0,0]<br>
+U06:%x[-1,0]/%x[0,0]/%x[1,0]<br>
+U07:%x[0,0]/%x[1,0]/%x[2,0]<br>
+U08:%x[-1,0]/%x[0,0]<br>
+U09:%x[0,0]/%x[1,0]<br>
+<br>
+# Bigram<br>
+B<br>
+```
 <br>
 5.With the model, we still need to prepare a test corpus for cr ++, and then use the testing tool of cr ++, crf_test, <br>
 for word annotation. The original test corpus is icwb2-data/testing/pku_test.utf8<br>
@@ -52,6 +53,6 @@ Then execute crf_test to get the word annotation result<br>
 7.Evaluate the segmentation effect.<br>
 `$ perl score ./icwb2-data/gold/pku_training_words.utf8 ./icwb2-data/gold/pku_test_gold.utf8 test.tag.utf8 > score_crf.ut8`<br>
 <br>
-------------------------------------
-F measure on pku set is : 0.930<br>
-------------------------------------
+`F measure on pku set is : 0.930`<br>
+  1
+  2
