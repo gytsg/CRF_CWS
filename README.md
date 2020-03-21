@@ -2,12 +2,14 @@
 <br>
 1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/ <br>
 2.-> Extract  <br>
-```$ cd CRF++-0.58``` <br>
-```$ ./configure``` <br>
-```$ sudo make```<br>
-```$ sudo make install```<br>
-//if raise ```ImportError: libcrfpp.so.0: cannot open shared object file: No such file or directory```<br>
-//use ```ln -s /usr/local/lib/libcrfpp.so.0 /usr/lib/```<br>
+```$ cd CRF++-0.58<br>```
+```$ ./configure<br>```
+```$ sudo make<br>```
+```$ sudo make install<br>```
+//if raise:<br>
+```ImportError: libcrfpp.so.0: cannot open shared object file: No such file or directory<br>```
+//use
+```ln -s /usr/local/lib/libcrfpp.so.0 /usr/lib/<br>```
 <br>
 3.The training data in backoff2005 was converted into the required training data format of CRF++, <br>
 and a 4-tag(B(Begin, prefix), E(End, suffix), M(Middle, Middle), S(Single, Single word) tag set <br>
