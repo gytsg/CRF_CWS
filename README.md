@@ -1,25 +1,24 @@
 # CRF_CWS Using CRF to deal with CWS(Chinese words segmentation) problem
 <br>
-1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/ <br>
+1.download CRF++ from https://taku910.github.io/crfpp/#tips   &&  corpus from http://sighan.cs.uchicago.edu/bakeoff2005/. <br>
 2.-> Extract  <br>
-```$ cd CRF++-0.58<br>```
-```$ ./configure<br>```
-```$ sudo make<br>```
-```$ sudo make install<br>```
+```$ cd CRF++-0.58```<br>
+```$ ./configure```<br>
+```$ sudo make```<br>
+```$ sudo make install```<br>
 //if raise:<br>
-```ImportError: libcrfpp.so.0: cannot open shared object file: No such file or directory<br>```
-//use
-```ln -s /usr/local/lib/libcrfpp.so.0 /usr/lib/<br>```
+```ImportError: libcrfpp.so.0: cannot open shared object file: No such file or directory```<br>
+//use:<br>
+```ln -s /usr/local/lib/libcrfpp.so.0 /usr/lib/```<br>
 <br>
-3.The training data in backoff2005 was converted into the required training data format of CRF++, <br>
-and a 4-tag(B(Begin, prefix), E(End, suffix), M(Middle, Middle), S(Single, Single word) tag set <br>
+3.The training data in backoff2005 was converted into the required training data format of CRF++,<br>
+and a 4-tag(B(Begin, prefix), E(End, suffix), M(Middle, Middle), S(Single, Single word) tag set<br>
 was used to process the utf-8 encoded text.<br>
 Turn training set "/icwb2-data/training/pku_training.utf8" to crf training set.<br>
 ```$ Python make_crf_train.py```<br>
-Get train.utf8<br>
-
+Get train.utf8.<br>
 4.To execute this command, you can create a new folder outside the installation file. <br>
-Template is the template file, and model is the model file after the training is completed. <br>
+Template is the template file, and model is the model file after the training is completed.<br>
 You only need to put the template and training data into the new folder.<br>
 ```$ crf_learn -f 3 -c 4.0 ./template ./train.utf8 model```<br>
 <br>
