@@ -43,15 +43,15 @@ B<br>
 <br>
 5.With the model, we still need to prepare a test corpus for cr ++, and then use the testing tool of cr ++, crf_test, <br>
 for word annotation. The original test corpus is icwb2-data/testing/pku_test.utf8<br>
-```$ python make_crf_test.py```<br>
+```$ python make_crf_test.py```
 Get test.utf8<br>
 Then execute crf_test to get the word annotation result<br>
-```$ crf_test -m ./model  ./test.utf8 > test.tag.utf8```<br>
+```$ crf_test -m ./model  ./test.utf8 > test.tag.utf8```
 <br>
 6.Next convert the marked bit information into participle results.<br>
-```$ python crf_2_word.py```<br>
+```$ python crf_2_word.py```
 <br>
 7.Evaluate the segmentation effect.<br>
-```$ perl score ./icwb2-data/gold/pku_training_words.utf8 ./icwb2-data/gold/pku_test_gold.utf8 test.tag.utf8 > score_crf.ut8```<br>
+```$ perl score ./icwb2-data/gold/pku_training_words.utf8 ./icwb2-data/gold/pku_test_gold.utf8 test.tag.utf8 > score_crf.ut8```
 <br>
-```F measure on pku set is : 0.930```<br>
+```F measure on pku set is : 0.930```
